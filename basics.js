@@ -1,24 +1,53 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-const axios_1 = __importDefault(require("axios"));
-function getData(number) {
+/*
+import axios from "axios";
+
+
+
+
+ function getData(number: number){
     const url = `https://jsonplaceholder.typicode.com/todos/${number}`;
-    axios_1.default.get(url)
-        .then(response => {
-        const todo = response.data;
-        const { id, title, completed } = todo;
-        logTODo(id, title, completed);
-    });
-    const logTODo = (id, title, completed) => {
-        console.log(`
+
+    interface ToDo {
+        id: number;
+        title: string;
+        completed: boolean;
+    }
+
+axios.get(url)
+.then(response => {
+    const todo= response.data as ToDo;
+    const {id, title, completed} = todo;
+
+    logTODo(id, title, completed)
+})
+
+const logTODo = (id: number, title: string, completed:boolean) => {
+    console.log(`
         id: ${id},
         title: ${title},
         completed: ${completed}
-    `);
-    };
+    `)
 }
+ }
+
 getData(1);
 getData(10);
+
+*/
+// Annotation
+let count = 5;
+count = 10;
+let hasPet = true;
+let nothing = null;
+let now = new Date();
+let colors = ['Black', 'Pink'];
+let numbers = [1, 2, 3];
+let results = [true, false, true];
+class Car {
+}
+let car = new Car();
+let point = {
+    x: 10,
+    y: 10
+};

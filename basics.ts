@@ -1,3 +1,4 @@
+/*
 import axios from "axios";
 
 
@@ -31,6 +32,46 @@ const logTODo = (id: number, title: string, completed:boolean) => {
 
 getData(1);
 getData(10);
+
+*/
+
+// Annotation
+
+let count: number = 5;
+count = 10;
+
+let hasPet: boolean = true;
+let nothing: null = null;
+
+let now: Date = new Date();
+
+let colors: string[] = ['Black', 'Pink'];
+let numbers: number[] = [1, 2, 3];
+let results: boolean[] = [true, false, true];
+
+
+class Car {
+
+
+}
+
+let car: Car = new Car();
+
+
+let point: {x: number; y: number} = {
+    x: 10,
+    y: 10
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
