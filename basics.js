@@ -10,11 +10,15 @@ function getData(number) {
         .then(response => {
         const todo = response.data;
         const { id, title, completed } = todo;
+        logTODo(id, title, completed);
+    });
+    const logTODo = (id, title, completed) => {
         console.log(`
         id: ${id},
         title: ${title},
         completed: ${completed}
     `);
-    });
+    };
 }
 getData(1);
+getData(10);

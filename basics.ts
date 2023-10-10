@@ -2,8 +2,8 @@ import axios from "axios";
 
 
 
-function getData(number: number){
 
+ function getData(number: number){
     const url = `https://jsonplaceholder.typicode.com/todos/${number}`;
 
     interface ToDo {
@@ -14,21 +14,23 @@ function getData(number: number){
 
 axios.get(url)
 .then(response => {
-    const todo: ToDo = response.data;
+    const todo= response.data as ToDo;
     const {id, title, completed} = todo;
 
+    logTODo(id, title, completed)
+})
+
+const logTODo = (id: number, title: string, completed:boolean) => {
     console.log(`
         id: ${id},
         title: ${title},
         completed: ${completed}
     `)
-})
 }
+ }
 
 getData(1);
-
-
-
+getData(10);
 
 
 
