@@ -76,7 +76,7 @@ logNumber(10);
 
 // When to use type annotations:
 
-//1) Function return the 'any' type
+/*//1) Function return the 'any' type
 
 const json = '{"Name": "userName", "Age": 30}';
 const user:{Name: string; Age: number} = JSON.parse(json);
@@ -109,3 +109,6 @@ for(let i = 0; i < nums.length; i++){
 }
 
 console.log(positiveNumber);
+*/
+
+

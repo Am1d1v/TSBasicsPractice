@@ -71,25 +71,37 @@ let point: {x: number; y: number} = {
 logNumber(10);
 */
 // When to use type annotations:
-//1) Function return the 'any' type
+/*//1) Function return the 'any' type
+
 const json = '{"Name": "userName", "Age": 30}';
-const user = JSON.parse(json);
+const user:{Name: string; Age: number} = JSON.parse(json);
 console.log(user);
+
+
 //2) Later Initialization
+
 let words = ['one', 'two', 'three'];
-let isTwo;
-for (let i = 0; i < words.length; i++) {
-    if (words[i] === 'two') {
+let isTwo: boolean;
+
+for (let i = 0; i < words.length; i++){
+    if(words[i] === 'two'){
         isTwo = true;
         break;
     }
 }
+
+
 //3) Variable whoes type cannot be inferred
+
 let nums = [-10, 1, 20];
-let positiveNumber = false;
-for (let i = 0; i < nums.length; i++) {
-    if (nums[i] > 0) {
+let positiveNumber: boolean | number = false;
+
+for(let i = 0; i < nums.length; i++){
+    if(nums[i] > 0){
         positiveNumber = nums[i];
+        
     }
 }
+
 console.log(positiveNumber);
+*/
