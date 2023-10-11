@@ -1,12 +1,27 @@
 "use strict";
-const add = (first, second) => {
-    return first + second;
-};
+/*
+const add = (first: number, second: number): number => {
+    return first + second
+}
 console.log(add(1, 10));
-const logger = (message) => {
-    console.log(message);
-};
+
+
+const logger = (message: string): void => {
+    console.log(message)
+}
 logger('Hello');
-const throwErroe = (message) => {
-    throw new Error(message);
+
+
+const throwErroe = (message: string): never => {
+        throw new Error(message);
+}
+*/
+// Destructuring
+const forecast = {
+    date: new Date(),
+    weather: 'sunny'
 };
+const logWeather = ({ date, weather }) => {
+    console.log(date, weather);
+};
+logWeather(forecast);
