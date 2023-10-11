@@ -83,10 +83,29 @@ const user:{Name: string; Age: number} = JSON.parse(json);
 console.log(user);
 
 
+//2) Later Initialization
+
+let words = ['one', 'two', 'three'];
+let isTwo: boolean;
+
+for (let i = 0; i < words.length; i++){
+    if(words[i] === 'two'){
+        isTwo = true;
+        break;
+    }
+}
 
 
+//3) Variable whoes type cannot be inferred
 
+let nums = [-10, 1, 20];
+let positiveNumber: boolean | number = false;
 
+for(let i = 0; i < nums.length; i++){
+    if(nums[i] > 0){
+        positiveNumber = nums[i];
+        
+    }
+}
 
-
-
+console.log(positiveNumber);
