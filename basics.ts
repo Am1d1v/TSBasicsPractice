@@ -37,6 +37,7 @@ getData(10);
 
 // Annotation
 
+/*
 let count: number = 5;
 count = 10;
 
@@ -62,10 +63,24 @@ let point: {x: number; y: number} = {
     x: 10,
     y: 10
 }
+*/
 
+// Functions
 
+/*const logNumber: (i: number) => void = (i: number)=> {
+    console.log(i * 2);
+}
 
+logNumber(10);
+*/
 
+// When to use type annotations:
+
+//1) Function return the 'any' type
+
+const json = '{"Name": "userName", "Age": 30}';
+const user:{Name: string; Age: number} = JSON.parse(json);
+console.log(user);
 
 
 
