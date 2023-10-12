@@ -30,12 +30,23 @@ class Vehicle {
 }
 
 
+
 class Car extends Vehicle {
+
+    constructor(public wheels: number, color: string){
+        super(color)
+    }
 
     drive(): void{
         console.log('Car is driving')
     }
 
+    carInfo(): void {
+        console.log(`
+        Number of Wheels: ${this.wheels}
+        Color: ${this.color}
+        `)
+    }
 }
 
 
@@ -44,8 +55,8 @@ vehicle.startDrawingProcess();
 console.log(vehicle.color);
 
 
-//const someCar = new Car();
-//someCar.drive();
+const someCar = new Car(6, 'Silver');
+someCar.carInfo();
 
 
 
